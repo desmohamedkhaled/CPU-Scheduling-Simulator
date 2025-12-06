@@ -16,7 +16,7 @@ This simulator supports multiple CPU scheduling algorithms:
 
 ```
 ├── web.html          # Main application interface
-├── login.html        # User authentication page
+├── index.html        # User authentication page
 ├── web.css           # Styling for main application
 ├── login.css         # Styling for login page
 ├── script.js         # Core application logic and scheduling algorithms
@@ -32,7 +32,7 @@ This simulator supports multiple CPU scheduling algorithms:
 
 ### Usage
 
-1. Open `login.html` in your web browser
+1. Open `index.html` in your web browser
 2. Complete the login process
 3. Select a CPU scheduling algorithm from the available options
 4. Enter process details (name, arrival time, burst time, priority if applicable)
@@ -68,7 +68,7 @@ Core functionality including:
 - Performance calculations
 - User authentication handling
 
-### login.html
+### index.html
 User login interface for session management
 
 ### web.css & login.css
