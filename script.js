@@ -22,7 +22,7 @@ let processCount = 2;
 // Check authentication
 document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('isLoggedIn') !== 'true') {
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
         return;
     }
 
@@ -52,7 +52,7 @@ function initApp() {
 // Handle logout
 function handleLogout() {
     localStorage.removeItem('isLoggedIn');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 // Handle algorithm selection
