@@ -6,8 +6,7 @@
 }
 
 :root {
-    --bg-gradient-start: #6e8efb;
-    --bg-gradient-end: #a777e3;
+    --bg-color: #f3f6ff;
     --container-bg: rgba(255, 255, 255, 0.95);
     --text-primary: #333;
     --text-secondary: #555;
@@ -21,8 +20,7 @@
 }
 
 body.dark-theme {
-    --bg-gradient-start: #1a1a2e;
-    --bg-gradient-end: #16213e;
+    --bg-color: #0f1629;
     --container-bg: rgba(30, 30, 46, 0.95);
     --text-primary: #e0e0e0;
     --text-secondary: #c0c0c0;
@@ -36,7 +34,7 @@ body.dark-theme {
 }
 
 body {
-    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    background: var(--bg-color);
     color: var(--text-primary);
     min-height: 100vh;
     padding: 20px;

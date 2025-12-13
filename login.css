@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: #f3f6ff;
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -74,7 +74,7 @@ body {
 .login-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(to right, #6e8efb, #a777e3);
+    background: #6e8efb;
     color: white;
     border: none;
     border-radius: 10px;
