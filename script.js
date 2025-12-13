@@ -636,7 +636,10 @@ function displayResults(schedule) {
 // Prepare step-by-step data
 function prepareStepData(ganttChart) {
     stepData = [];
-    const colors = ['#6e8efb', '#a777e3', '#51cf66', '#ff6b6b', '#ffa94d', '#20c997', '#e64980', '#7950f2'];
+    const colors = [
+        '#5a9cb5', '#faac68', '#fa6868', '#face68',
+        '#447a90', '#d98a4d', '#d65c5c', '#dcb44f'
+    ];
     
     ganttChart.forEach((segment, index) => {
         stepData.push({
@@ -657,7 +660,10 @@ function generateGanttChart(ganttChart) {
     if (ganttChart.length === 0) return;
     
     const totalTime = ganttChart[ganttChart.length - 1].end;
-    const colors = ['#6e8efb', '#a777e3', '#51cf66', '#ff6b6b', '#ffa94d', '#20c997', '#e64980', '#7950f2'];
+    const colors = [
+        '#5a9cb5', '#faac68', '#fa6868', '#face68',
+        '#447a90', '#d98a4d', '#d65c5c', '#dcb44f'
+    ];
     
     ganttChart.forEach((segment, index) => {
         const width = ((segment.end - segment.start) / totalTime) * 100;

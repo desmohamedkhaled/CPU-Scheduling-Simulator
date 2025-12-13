@@ -6,28 +6,32 @@
 }
 
 :root {
-    --bg-color: #f3f6ff;
+    --bg-color: #face68;
     --container-bg: rgba(255, 255, 255, 0.95);
-    --text-primary: #333;
-    --text-secondary: #555;
-    --text-tertiary: #777;
-    --border-color: #eee;
+    --text-primary: #2d2d2d;
+    --text-secondary: #4a4a4a;
+    --text-tertiary: #6b6b6b;
+    --border-color: #f1d7a1;
     --card-bg: white;
-    --primary-color: #6e8efb;
+    --primary-color: #5a9cb5;
+    --accent-warm: #faac68;
+    --accent-hot: #fa6868;
     --shadow-light: rgba(0, 0, 0, 0.05);
     --shadow-medium: rgba(0, 0, 0, 0.1);
     --shadow-heavy: rgba(0, 0, 0, 0.2);
 }
 
 body.dark-theme {
-    --bg-color: #0f1629;
-    --container-bg: rgba(30, 30, 46, 0.95);
-    --text-primary: #e0e0e0;
-    --text-secondary: #c0c0c0;
-    --text-tertiary: #a0a0a0;
-    --border-color: #404040;
-    --card-bg: #2a2a3e;
-    --primary-color: #7c9ff5;
+    --bg-color: #1a2e38;
+    --container-bg: rgba(18, 32, 40, 0.92);
+    --text-primary: #e5e8eb;
+    --text-secondary: #cbd2d6;
+    --text-tertiary: #9fabb3;
+    --border-color: #2f4a58;
+    --card-bg: #233640;
+    --primary-color: #faac68;
+    --accent-warm: #faac68;
+    --accent-hot: #fa6868;
     --shadow-light: rgba(0, 0, 0, 0.3);
     --shadow-medium: rgba(0, 0, 0, 0.4);
     --shadow-heavy: rgba(0, 0, 0, 0.6);
@@ -106,7 +110,7 @@ body {
 
 .logout-btn {
     padding: 10px 20px;
-    background: #ff6b6b;
+    background: var(--accent-hot);
     color: white;
     border: none;
     border-radius: 8px;
@@ -116,7 +120,7 @@ body {
 }
 
 .logout-btn:hover {
-    background: #ff5252;
+    background: #e95a5a;
     transform: translateY(-2px);
 }
 
@@ -155,7 +159,7 @@ body {
 
 .algorithm-card.selected {
     border-color: var(--primary-color);
-    background: rgba(110, 142, 251, 0.1);
+    background: rgba(90, 156, 181, 0.15);
     transform: translateY(-2px);
 }
 
@@ -275,7 +279,7 @@ body {
 .process-table input:focus {
     border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.2);
+    box-shadow: 0 0 0 2px rgba(90, 156, 181, 0.2);
 }
 
 .process-actions {
@@ -295,42 +299,42 @@ body {
 }
 
 .add-btn {
-    background: #51cf66;
-    color: white;
+    background: #face68;
+    color: #2d2d2d;
 }
 
 .add-btn:hover {
-    background: #40c057;
+    background: #f3c04f;
     transform: translateY(-2px);
 }
 
 .delete-btn {
-    background: #ff6b6b;
+    background: var(--accent-hot);
     color: white;
 }
 
 .delete-btn:hover {
-    background: #ff5252;
+    background: #e95a5a;
     transform: translateY(-2px);
 }
 
 .calculate-btn {
-    background: #6e8efb;
+    background: var(--primary-color);
     color: white;
 }
 
 .calculate-btn:hover {
-    background: #5a7dfa;
+    background: #4a86a0;
     transform: translateY(-2px);
 }
 
 .step-btn {
-    background: #ffa500;
-    color: white;
+    background: var(--accent-warm);
+    color: #2d2d2d;
 }
 
 .step-btn:hover {
-    background: #ff9500;
+    background: #f89c4e;
     transform: translateY(-2px);
 }
 

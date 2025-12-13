@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f3f6ff;
+    background: #face68;
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -31,7 +31,7 @@ body {
 }
 
 .login-header h1 {
-    color: #6e8efb;
+    color: #5a9cb5;
     font-size: 2.5rem;
     margin-bottom: 10px;
     animation: slideDown 0.8s ease-out;
@@ -65,16 +65,17 @@ body {
 }
 
 .form-group input:focus {
-    border-color: #6e8efb;
+    border-color: #5a9cb5;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.2);
+    box-shadow: 0 0 0 3px rgba(90, 156, 181, 0.2);
     transform: translateY(-2px);
 }
+
 
 .login-btn {
     width: 100%;
     padding: 15px;
-    background: #6e8efb;
+    background: #5a9cb5;
     color: white;
     border: none;
     border-radius: 10px;
@@ -86,6 +87,7 @@ body {
 }
 
 .login-btn:hover {
+    background: #4a86a0;
     transform: translateY(-3px);
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
 }
