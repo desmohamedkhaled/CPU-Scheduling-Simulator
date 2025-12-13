@@ -12,6 +12,13 @@ This simulator supports multiple CPU scheduling algorithms:
 - **Priority Scheduling** - Processes scheduled based on priority levels
 - **Round Robin** - Time quantum-based circular scheduling
 
+### User Experience Enhancements
+
+- **Dark/Light Theme Toggle**: Switch themes with the header toggle; preference is saved in localStorage.
+- **Preset Test Cases**: Load ready-made process sets from the "Load Preset" dropdown for quick demos.
+- **Step-by-Step Execution**: Enable step mode to navigate the Gantt chart execution with Previous/Next controls.
+- **Mobile-Responsive UI**: Optimized layouts and tables for small screens, with horizontal scroll where needed.
+
 ## Project Structure
 
 ```
@@ -35,13 +42,15 @@ This simulator supports multiple CPU scheduling algorithms:
 1. Open `index.html` in your web browser
 2. Complete the login process
 3. Select a CPU scheduling algorithm from the available options
-4. Enter process details (name, arrival time, burst time, priority if applicable)
-5. Set time quantum for Round Robin if selected
-6. Click "Simulate" to view:
+4. Optionally choose a preset from the "Load Preset" dropdown to auto-fill processes
+5. Enter or adjust process details (arrival time, burst time, priority if applicable)
+6. Set time quantum when using Round Robin
+7. Click "Calculate Schedule" to view:
    - Gantt chart visualization
    - Process execution timeline
    - Average turnaround time
    - Average waiting time
+8. For learning: click "Enable Step Mode" to step through execution with the controls in the Results section
 
 ## Features
 
@@ -67,6 +76,9 @@ Core functionality including:
 - Gantt chart generation
 - Performance calculations
 - User authentication handling
+- Theme management (dark/light)
+- Preset loader for test cases
+- Step-by-step execution controls
 
 ### index.html
 User login interface for session management
@@ -90,6 +102,17 @@ This will:
 - Fall back to g++ compilation if CMake is not present
 - Output executable file for backend testing
 
+## Deployment
+
+This project is static and deployable on Vercel:
+
+- Ensure `index.html` exists at the project root.
+- `vercel.json` is included; Vercel will serve static files.
+- Connect the GitHub repo to Vercel and enable automatic deployments.
+
+Troubleshooting:
+- If you see `404 NOT_FOUND`, confirm `index.html` exists and deployment points to the repo root.
+
 ## Browser Compatibility
 
 - Chrome/Chromium (latest)
@@ -102,6 +125,7 @@ This will:
 The application uses browser local storage for:
 - User authentication state
 - Session management
+- Dark theme preference (`darkTheme`)
 
 ## Author
 
