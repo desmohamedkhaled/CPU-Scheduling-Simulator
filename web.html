@@ -92,20 +92,20 @@
                     </thead>
                     <tbody id="processTableBody">
                         <tr>
-                            <td>P1</td>
-                            <td><input type="number" class="arrival-time" min="0" value="0"></td>
-                            <td><input type="number" class="burst-time" min="1" value="5"></td>
-                            <td class="priority-cell"><input type="number" class="priority" min="1" value="1"></td>
+                            <td data-label="Process ID">P1</td>
+                            <td data-label="Arrival Time"><input type="number" class="arrival-time" min="0" value="0"></td>
+                            <td data-label="Burst Time"><input type="number" class="burst-time" min="1" value="5"></td>
+                            <td class="priority-cell" data-label="Priority"><input type="number" class="priority" min="1" value="1"></td>
                             
-                            <td><button class="delete-btn action-btn" onclick="deleteProcess(this)">Delete</button></td>
+                            <td data-label="Actions"><button class="delete-btn action-btn" onclick="deleteProcess(this)">Delete</button></td>
                         </tr>
                         <tr>
-                            <td>P2</td>
-                            <td><input type="number" class="arrival-time" min="0" value="1"></td>
-                            <td><input type="number" class="burst-time" min="1" value="3"></td>
-                            <td class="priority-cell"><input type="number" class="priority" min="1" value="2"></td>
+                            <td data-label="Process ID">P2</td>
+                            <td data-label="Arrival Time"><input type="number" class="arrival-time" min="0" value="1"></td>
+                            <td data-label="Burst Time"><input type="number" class="burst-time" min="1" value="3"></td>
+                            <td class="priority-cell" data-label="Priority"><input type="number" class="priority" min="1" value="2"></td>
                             
-                            <td><button class="delete-btn action-btn" onclick="deleteProcess(this)">Delete</button></td>
+                            <td data-label="Actions"><button class="delete-btn action-btn" onclick="deleteProcess(this)">Delete</button></td>
                         </tr>
                     </tbody>
                 </table>

@@ -447,6 +447,128 @@ body {
     background: var(--border-color);
 }
 
+/* Mobile-friendly table card layout for small screens */
+@media (max-width: 767px) {
+    .results-table,
+    .process-table {
+        display: block;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+    }
+    
+    .results-table thead,
+    .process-table thead {
+        display: none;
+    }
+    
+    .results-table tbody,
+    .process-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .results-table tr,
+    .process-table tr {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: var(--card-bg) !important;
+        border: 1.5px solid var(--border-color);
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 0;
+        box-shadow: 0 3px 12px var(--shadow-light);
+        overflow: visible;
+        gap: 0;
+    }
+    
+    .results-table td,
+    .process-table td {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 0;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 0;
+        color: var(--text-primary);
+    }
+    
+    .results-table td:last-child,
+    .process-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .results-table td::before,
+    .process-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--primary-color);
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
+    /* Process table specific styling */
+    .process-table td input {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    
+    .process-table .delete-btn {
+        width: 100% !important;
+        padding: 8px !important;
+        margin: 0 !important;
+    }
+    
+    /* Results table specific values */
+    .results-table td {
+        padding: 12px 0;
+    }
+    
+    .results-table td:first-child {
+        font-weight: 600;
+        font-size: 1.05rem;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--primary-color) !important;
+        grid-template-columns: 140px auto;
+    }
+    
+    .results-table td:first-child::before {
+        content: "Process";
+    }
+    
+    .results-table td:nth-child(2)::before {
+        content: "Arrival Time";
+    }
+    
+    .results-table td:nth-child(3)::before {
+        content: "Burst Time";
+    }
+    
+    .results-table td:nth-child(4)::before {
+        content: "Priority";
+    }
+    
+    .results-table td:nth-child(5)::before {
+        content: "Completion";
+    }
+    
+    .results-table td:nth-child(6)::before {
+        content: "Turnaround";
+    }
+    
+    .results-table td:nth-child(7)::before {
+        content: "Waiting";
+    }
+}
+
 .avg-results {
     display: flex;
     gap: 20px;

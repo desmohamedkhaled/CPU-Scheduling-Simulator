@@ -255,11 +255,11 @@ function addProcess() {
     processCount++;
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
-        <td>P${processCount}</td>
-        <td><input type="number" class="arrival-time" min="0" value="0"></td>
-        <td><input type="number" class="burst-time" min="1" value="1"></td>
-        <td class="priority-cell"><input type="number" class="priority" min="1" value="1"></td>
-        <td><button class="delete-btn action-btn" onclick="deleteProcess(this)">Delete</button></td>
+        <td data-label="Process ID">P${processCount}</td>
+        <td data-label="Arrival Time"><input type="number" class="arrival-time" min="0" value="0"></td>
+        <td data-label="Burst Time"><input type="number" class="burst-time" min="1" value="1"></td>
+        <td class="priority-cell" data-label="Priority"><input type="number" class="priority" min="1" value="1"></td>
+        <td data-label="Actions"><button class="delete-btn action-btn" onclick="deleteProcess(this)">Delete</button></td>
     `;
     processTableBody.appendChild(newRow);
     
@@ -764,13 +764,13 @@ function generateResultsTable(processes) {
         const row = document.createElement('tr');
         
         row.innerHTML = `
-            <td>${process.id}</td>
-            <td>${process.arrivalTime}</td>
-            <td>${process.burstTime}</td>
-            <td ${!showPriority ? 'style="display:none"' : ''}>${process.priority ?? '-'}</td>
-            <td>${process.completionTime}</td>
-            <td>${process.turnaroundTime}</td>
-            <td>${process.waitingTime}</td>
+            <td data-label="Process">${process.id}</td>
+            <td data-label="Arrival Time">${process.arrivalTime}</td>
+            <td data-label="Burst Time">${process.burstTime}</td>
+            <td data-label="Priority" ${!showPriority ? 'style="display:none"' : ''}>${process.priority ?? '-'}</td>
+            <td data-label="Completion Time">${process.completionTime}</td>
+            <td data-label="Turnaround Time">${process.turnaroundTime}</td>
+            <td data-label="Waiting Time">${process.waitingTime}</td>
         `;
         
         resultsTableBody.appendChild(row);
