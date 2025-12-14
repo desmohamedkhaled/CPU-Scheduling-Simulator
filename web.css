@@ -519,19 +519,106 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+
+/* Extra large screens (1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .app-container {
+        padding: 40px;
+    }
+    
+    .app-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .algorithms {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+/* Large screens (1200px to 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .app-container {
+        padding: 35px;
+    }
+    
+    .app-header h1 {
+        font-size: 2.3rem;
+    }
+    
+    .algorithms {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Medium-large screens (992px to 1199px) - Tablets landscape */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 95%;
+        max-width: 960px;
+    }
+    
+    .app-container {
+        padding: 30px;
+    }
+    
+    .app-header h1 {
+        font-size: 2rem;
+    }
+    
+    .app-header {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+    
+    .algorithms {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    
+    .process-table th, .process-table td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .process-table input {
+        width: 70px;
+        padding: 6px;
+    }
+    
+    .avg-results {
+        gap: 15px;
+    }
+}
+
+/* Medium screens (768px to 991px) - Standard tablets */
+@media (max-width: 991px) {
     body {
-        padding: 10px;
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
     }
 
     .app-container {
-        padding: 20px;
+        padding: 25px;
+        border-radius: 15px;
     }
 
     .app-header {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
     }
     
     .app-header h1 {
@@ -541,78 +628,635 @@ body {
     .header-controls {
         width: 100%;
         justify-content: center;
+        gap: 8px;
+    }
+
+    .theme-toggle-btn,
+    .logout-btn {
+        padding: 8px 15px;
+        font-size: 1rem;
     }
     
     .algorithms {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+
+    .algorithm-card {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .algorithm-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .algorithm-card p {
+        font-size: 0.85rem;
     }
 
     .process-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        margin-bottom: 15px;
     }
 
     .preset-controls {
         width: 100%;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+    }
+
+    .preset-controls label {
+        font-size: 0.95rem;
+        margin-bottom: 5px;
     }
 
     .preset-select {
         width: 100%;
+        padding: 10px;
+    }
+    
+    .time-quantum {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .time-quantum label {
+        font-size: 0.95rem;
+    }
+
+    .time-quantum input {
+        width: 100%;
+        max-width: 100px;
     }
     
     .process-actions {
         flex-direction: column;
+        gap: 8px;
     }
 
     .action-btn {
         width: 100%;
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .process-table {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    
+    .process-table th, .process-table td {
+        padding: 8px 6px;
+    }
+
+    .process-table input {
+        width: 65px;
+        padding: 5px;
+        font-size: 0.85rem;
     }
 
     .step-controls {
         flex-direction: column;
         gap: 10px;
-    }
-    
-    .avg-results {
-        flex-direction: column;
-    }
-    
-    .process-table {
-        font-size: 0.85rem;
-        display: block;
-        overflow-x: auto;
-    }
-    
-    .process-table th, .process-table td {
-        padding: 8px 5px;
+        padding: 12px;
+        margin-bottom: 15px;
     }
 
-    .process-table input {
-        width: 60px;
-        padding: 5px;
+    .step-controls button {
+        width: 100%;
+    }
+    
+    .step-info {
+        font-size: 0.95rem;
+        min-width: auto;
     }
 
     .gantt-container {
         height: 50px;
+        margin-bottom: 10px;
     }
 
     .gantt-process {
+        font-size: 0.8rem;
+    }
+
+    .results-table {
         font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .results-table th, .results-table td {
+        padding: 8px 5px;
+    }
+    
+    .avg-results {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .avg-box {
+        padding: 15px;
+    }
+
+    .avg-box h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .avg-value {
+        font-size: 1.8rem;
+    }
+
+    .gantt-chart {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .gantt-chart h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
     }
 }
 
-@media (max-width: 480px) {
+/* Small screens (480px to 767px) - Mobile phones */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .app-container {
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px var(--shadow-heavy);
+    }
+
+    .app-header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+    }
+    
     .app-header h1 {
         font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .header-controls {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .theme-toggle-btn,
+    .logout-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+    }
+
+    .algorithm-selection {
+        margin-bottom: 20px;
+    }
+
+    .algorithm-selection h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .algorithms {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .algorithm-card {
-        padding: 15px;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .algorithm-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+    }
+
+    .algorithm-card p {
+        font-size: 0.8rem;
+    }
+
+    .process-input {
+        margin-bottom: 20px;
+    }
+
+    .process-input h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .process-header {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 12px;
+    }
+
+    .preset-controls {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .preset-controls label {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .preset-select {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .time-quantum {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .time-quantum label {
+        font-size: 0.9rem;
+    }
+
+    .time-quantum input {
+        width: 100%;
+        max-width: 80px;
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+
+    .process-actions {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .action-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+    }
+
+    .process-table {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .process-table th, .process-table td {
+        padding: 6px 4px;
+        text-align: center;
+    }
+
+    .process-table th {
+        background: var(--primary-color);
     }
 
     .process-table input {
         width: 50px;
+        padding: 4px;
+        font-size: 0.8rem;
+        border-radius: 4px;
+    }
+
+    .results {
+        margin-top: 15px;
+    }
+
+    .results h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .step-controls {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    .step-controls button {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .step-info {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .gantt-chart {
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    .gantt-chart h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .gantt-container {
+        height: 45px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+    }
+
+    .gantt-process {
+        font-size: 0.75rem;
+    }
+
+    .gantt-timeline {
+        padding: 0 5px;
+    }
+
+    .gantt-time {
+        font-size: 0.7rem;
+    }
+
+    .results-table {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    .results-table th, .results-table td {
+        padding: 6px 3px;
+    }
+    
+    .avg-results {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .avg-box {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .avg-box h3 {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+
+    .avg-value {
+        font-size: 1.6rem;
+    }
+}
+
+/* Extra small screens (below 480px) - Small mobile phones */
+@media (max-width: 479px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .app-container {
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px var(--shadow-heavy);
+    }
+
+    .app-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    
+    .app-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-controls {
+        width: 100%;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .theme-toggle-btn,
+    .logout-btn {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+        border-radius: 5px;
+    }
+
+    .algorithm-selection h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .algorithms {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .algorithm-card {
+        padding: 10px;
+    }
+
+    .algorithm-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .algorithm-card p {
+        font-size: 0.75rem;
+    }
+
+    .process-input h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .preset-controls {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .preset-select {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .time-quantum {
+        gap: 6px;
+    }
+
+    .time-quantum input {
+        max-width: 70px;
+        padding: 5px;
+        font-size: 0.85rem;
+    }
+
+    .action-btn {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .process-table {
+        font-size: 0.7rem;
+    }
+    
+    .process-table th, .process-table td {
+        padding: 5px 2px;
+    }
+
+    .process-table input {
+        width: 45px;
+        padding: 3px;
+        font-size: 0.75rem;
+    }
+
+    .step-controls {
+        padding: 8px;
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .step-controls button {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+
+    .step-info {
+        font-size: 0.85rem;
+    }
+
+    .gantt-chart {
+        padding: 10px;
+    }
+
+    .gantt-chart h3 {
+        font-size: 0.9rem;
+    }
+
+    .gantt-container {
+        height: 40px;
+    }
+
+    .gantt-process {
+        font-size: 0.7rem;
+    }
+
+    .gantt-time {
+        font-size: 0.65rem;
+    }
+
+    .results-table {
+        font-size: 0.7rem;
+    }
+
+    .results-table th, .results-table td {
+        padding: 5px 2px;
+    }
+
+    .avg-box {
+        padding: 10px;
+    }
+
+    .avg-box h3 {
+        font-size: 0.85rem;
+    }
+
+    .avg-value {
+        font-size: 1.4rem;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 991px) and (orientation: landscape) {
+    .app-container {
+        padding: 15px;
+    }
+
+    .app-header {
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+    }
+    
+    .app-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .algorithm-selection {
+        margin-bottom: 15px;
+    }
+
+    .algorithms {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .process-input {
+        margin-bottom: 15px;
+    }
+
+    .action-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .process-table {
+        font-size: 0.75rem;
+    }
+
+    .process-table th, .process-table td {
+        padding: 5px 3px;
+    }
+
+    .gantt-container {
+        height: 40px;
+    }
+
+    .results-table {
+        font-size: 0.75rem;
+    }
+}
+
+/* Folded/popup screens and notches support */
+@media (screen-spanning: single-fold-vertical) {
+    .app-container {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+}
+
+/* High DPI displays - enhance touch targets */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    .action-btn,
+    .algorithm-card,
+    input[type="number"],
+    select {
+        min-height: 44px;
+        min-width: 44px;
     }
 }
