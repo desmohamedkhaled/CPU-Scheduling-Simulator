@@ -10,7 +10,13 @@ This simulator supports multiple CPU scheduling algorithms:
 - **SJF** (Shortest Job First) - Processes with shortest burst time execute first
 - **SRTF** (Shortest Remaining Time First) - Preemptive version of SJF
 - **Priority Scheduling** - Processes scheduled based on priority levels
+- **Priority (Preemptive)** - Preemptive priority with dynamic queue updates
 - **Round Robin** - Time quantum-based circular scheduling
+- **HRRN** (Highest Response Ratio Next) - Non-preemptive starvation-aware scheduling
+- **MLQ** (Multilevel Queue) - Fixed queues; high-priority Round Robin, lower FCFS
+- **MLFQ** (Multilevel Feedback Queue) - Three-level feedback with tunable base quantum
+- **Rate Monotonic** - Fixed-priority real-time based on period
+- **EDF** (Earliest Deadline First) - Preemptive real-time based on nearest deadline
 
 ### User Experience Enhancements
 
