@@ -87,32 +87,10 @@ User login interface for session management
 ### web.css & login.css
 Styling for the application with responsive design
 
-### build.ps1
-PowerShell build helper for compiling any C++ backend components (if using CMake or g++)
-
-## Build Instructions (Optional)
-
-For Windows with PowerShell:
-
-```powershell
-.\build.ps1
-```
-
 This will:
 - Use CMake if available (Release build)
 - Fall back to g++ compilation if CMake is not present
 - Output executable file for backend testing
-
-## Deployment
-
-This project is static and deployable on Vercel:
-
-- Ensure `index.html` exists at the project root.
-- `vercel.json` is included; Vercel will serve static files.
-- Connect the GitHub repo to Vercel and enable automatic deployments.
-
-Troubleshooting:
-- If you see `404 NOT_FOUND`, confirm `index.html` exists and deployment points to the repo root.
 
 ## Browser Compatibility
 
@@ -127,11 +105,3 @@ The application uses browser local storage for:
 - User authentication state
 - Session management
 - Dark theme preference (`darkTheme`)
-
-## Author
-
-CPU Scheduling Simulator Project
-
-## License
-
-Open source - Feel free to modify and distribute
